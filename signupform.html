@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label,
+        .form-container input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 10px;
+                margin: 20px;
+            }
+        }
+
+        /* Hide contact icon in WebKit browsers */
+        input::-webkit-contacts-auto-fill-button {
+            display: none !important;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form action="/submit" method="post" autocomplete="off">
+            <!-- Username field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
+            <br>
+
+            <!-- Email field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="off" required>
+            <br>
+
+            <!-- Password field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+
+            <!-- Confirm Password field -->
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <br>
+
+            <!-- Submit button -->
+            <input type="submit" value="Sign Up">
+        </form>
+        <p>Already have an account? <a href="#">Login</a> | <a href="#">Forgot Password?</a></p>
+    </div>
+</body>
+</html>
